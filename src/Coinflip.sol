@@ -55,7 +55,7 @@ contract Coinflip is Ownable{
         bets[msg.sender] = Guesses;
 
         // Requesting 3 random words from the VRF oracle
-        uint256 requestId = vrfRequestor.requestRandomWords(true);
+        uint256 requestId = vrfRequestor.requestRandomWords(false);
 
         // Recording the requestId for this player
         playerRequestID[msg.sender] = requestId;
